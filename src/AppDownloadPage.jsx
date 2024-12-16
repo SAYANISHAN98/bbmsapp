@@ -6,43 +6,47 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const AppDownloadPage = () => {
   return (
-    <div className="flex flex-col w-screen h-screen">
-     
+    <div className="flex flex-col min-h-screen">
+      
       <Navigation />
 
-      <div className="flex items-center justify-center flex-grow bg-gray-200">
-        <div className="flex w-[70%] h-[70%] bg-white rounded-lg shadow-lg">
+      <div className="flex items-center justify-center flex-grow px-4 bg-gray-200">
+        <div className="flex flex-col w-full max-w-4xl bg-white rounded-lg shadow-lg md:flex-row">
           
-          <div className="flex items-center justify-center w-1/2 p-4 rounded-l-lg">
+          {/* Left Section (Image) */}
+          <div className="flex items-center justify-center w-full p-4 rounded-t-lg md:w-1/2 md:rounded-l-lg md:rounded-tr-none">
             <img
               src={mobileImage}
               alt="Phone"
-              className="w-auto h-full max-h-[800px] object-contain"
+              className="object-contain w-full h-auto max-h-96"
             />
           </div>
 
-          <div className="flex flex-col items-center justify-center w-1/2 p-8">
-            <h1 className="text-3xl font-bold text-gray-800">DOWNLOAD OUR APP</h1>
+          {/* Right Section (Content) */}
+          <div className="flex flex-col items-center justify-center w-full p-8 md:w-1/2">
+            <h1 className="text-2xl font-bold text-center text-gray-800 md:text-3xl">
+              DOWNLOAD OUR APP
+            </h1>
             
             <div className="flex justify-center mt-6">
               <a
-                href="/path/to/your-app.apk" 
+                href="/path/to/your-app.apk"
                 download
-                className="flex items-center justify-center px-6 py-3 text-white transition bg-black rounded-lg shadow-md w-80 hover:bg-gray-800"
+                className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white transition bg-black rounded-lg shadow-md hover:bg-gray-800"
               >
-                {/* Font Awesome Icon */}
                 <FontAwesomeIcon icon={faDownload} className="w-6 h-6 mr-2" />
                 <span>Download App</span>
               </a>
             </div>
-            <p className="mt-4 text-sm font-semibold text-gray-600">
-            Your default password has been sent to your registered email address.
+
+            <p className="mt-4 text-sm font-semibold text-center text-gray-600">
+              Your default password has been sent to your registered email address.
             </p>
           </div>
         </div>
       </div>
 
-      <footer className="mt-auto text-sm text-center text-gray-500">
+      <footer className="px-4 mt-auto text-sm text-center text-gray-500">
         © 2024 Blood Bank Management System
       </footer>
     </div>
