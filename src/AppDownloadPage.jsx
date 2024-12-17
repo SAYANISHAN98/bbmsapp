@@ -7,7 +7,6 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 const AppDownloadPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      
       <Navigation />
 
       <div className="flex items-center justify-center flex-grow px-4 bg-gray-200">
@@ -30,7 +29,7 @@ const AppDownloadPage = () => {
             
             <div className="flex justify-center mt-6">
               <a
-                href="/path/to/your-app.apk"
+                href="/app.apk"
                 download
                 className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white transition bg-black rounded-lg shadow-md hover:bg-gray-800"
               >
