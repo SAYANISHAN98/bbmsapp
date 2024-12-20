@@ -30,7 +30,7 @@ const AppDownloadPage = () => {
             
             <div className="flex justify-center mt-6">
               <a
-                href="app.apk"
+                href="application.apk"
                 download
                 className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white transition bg-black rounded-lg shadow-md hover:bg-gray-800"
               >
